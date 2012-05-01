@@ -1,0 +1,21 @@
+<!-- Require jQuery / Anyversion -->
+<script language="Javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- Require EasyJQuery After JQuery -->
+<script language="Javascript" type="text/javascript" src="http://api.easyjquery.com/easyjquery.js"></script>
+
+<script language="Javascript">
+    // 1. Your Data Here
+    function my_callback(json) {
+        alert("IP :" + json.IP + " nCOUNTRY: " + json.COUNTRY);
+    }
+
+    function my_callback2(json) {
+        // more information at http://api.easyjquery.com/test/demo-ip.php
+        alert("IP :" + json.IP + " nCOUNTRY: " + json.COUNTRY + " City: " + json.cityName + " regionName: " + json.regionName + "cityLatitude:" + json.cityLatitude);
+    }
+
+    // 2. Setup Callback Function
+    // EasyjQuery_Get_IP("my_callback"); // fastest version
+    EasyjQuery_Get_IP("my_callback2", "full"); // full version
+
+</script>
